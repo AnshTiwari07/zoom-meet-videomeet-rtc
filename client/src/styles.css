@@ -1,0 +1,36 @@
+:root {
+  --bg: #0e0f15;
+  --panel: #44474f;
+  --accent: #59c2e0;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+
+.container { display: grid; grid-template-columns: 1fr 320px; gap: 12px; height: 100%; padding: 12px; }
+.left { display: grid; grid-template-rows: 1fr auto; gap: 12px; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; padding: 8px; background: var(--panel); border-radius: 8px; }
+.video-tile { position: relative; background: #111319; border-radius: 6px; overflow: hidden; }
+.video-tile video { width: 100%; height: 100%; object-fit: cover; background: black; }
+.controls { display: flex; gap: 8px; padding: 8px; background: var(--panel); border-radius: 8px; }
+.controls button { background: #222636; color: var(--text); border: 1px solid #2c3347; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+.controls button.active { background: var(--accent); border-color: var(--accent); }
+.sidebar { background: var(--panel); border-radius: 10px; display: grid; grid-template-rows: auto 1fr auto; }
+.sidebar header { padding: 10px 12px; border-bottom: 1px solid #222636; font-weight: 600; }
+.chat { padding: 8px; overflow-y: auto; }
+.chat .msg { margin-bottom: 8px; }
+.chat .meta { font-size: 12px; color: var(--muted); }
+.chat-input { display: flex; gap: 8px; padding: 8px; border-top: 1px solid #222636; }
+.chat-input input { flex: 1; background: #121521; border: 1px solid #2c3347; color: var(--text); border-radius: 6px; padding: 8px; }
+.chat-input button { background: var(--accent); color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+
+.join { display: grid; place-items: center; height: 100%; }
+.form { display: grid; gap: 10px; width: 360px; background: var(--panel); padding: 16px; border-radius: 8px; }
+.form input { background: #121521; border: 1px solid #2c3347; color: var(--text); border-radius: 6px; padding: 8px; }
+.form button { background: var(--accent); color: white; border: none; padding: 10px; border-radius: 6px; cursor: pointer; }
+ .btn { background: transparent; color: var(--text); border: 1px solid #2c3347; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+ .btn-outline-secondary { background: transparent; color: var(--muted); border-color: #6c757d; }
+ .btn-outline-secondary:hover { color: var(--text); border-color: #6c757d; background: #20232e; }
